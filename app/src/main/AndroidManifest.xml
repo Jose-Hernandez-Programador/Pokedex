@@ -12,10 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.POKEDEX">
         <activity
+            android:name=".DatosPokemon"
+            android:exported="false"
+            android:label="@string/title_activity_datos_pokemon"
+            android:theme="@style/Theme.POKEDEX" />
+        <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
             android:exported="true"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.POKEDEX">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
