@@ -1,5 +1,6 @@
 package com.example.pokedex
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -24,6 +25,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -76,6 +78,9 @@ fun FondoPantalla (){
 @Preview
 @Composable
 fun ContenidoPantalla() {
+
+    val pokemon= LocalContext.current
+
     Box(modifier = Modifier.fillMaxSize()) {
 
         Image(
@@ -111,7 +116,9 @@ fun ContenidoPantalla() {
             Spacer(modifier = Modifier.height(30.dp))
 
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { val intent= Intent(pokemon, MainActivity::class.java)
+                    pokemon.startActivity(intent)
+                          },
                 modifier = Modifier
                     .fillMaxWidth(0.8f)//ocupa el 80% del ancho de la pantalla
                     .height(55.dp),
