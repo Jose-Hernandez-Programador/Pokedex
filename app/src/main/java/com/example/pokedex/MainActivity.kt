@@ -59,7 +59,7 @@ fun FondoPantalla (){
             modifier = Modifier
                 .align (Alignment.BottomStart)
                 .padding(10.dp)
-                .navigationBarsPadding()
+                .navigationBarsPadding()//crea espacio para la barra de navegación
         )
 
         Text(
@@ -116,7 +116,7 @@ fun ContenidoPantalla() {
             Spacer(modifier = Modifier.height(30.dp))
 
             Button(
-                onClick = { val intent= Intent(pokemon, MainActivity::class.java)
+                onClick = { val intent= Intent(pokemon, DatosPokemon::class.java)
                     pokemon.startActivity(intent)
                           },
                 modifier = Modifier
