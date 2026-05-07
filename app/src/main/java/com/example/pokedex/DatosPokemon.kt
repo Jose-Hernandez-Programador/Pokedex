@@ -179,7 +179,7 @@ fun InformacionPokemon(viewModel: ViewModelPokemon =viewModel(),
                     Card(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 12.dp, vertical = 6.dp),
+                            .padding(horizontal = 60.dp, vertical = 6.dp),
                         elevation = CardDefaults.cardElevation(6.dp),
                         colors = CardDefaults.cardColors(
                             containerColor = Color(0xFFE51F25)
@@ -201,7 +201,7 @@ fun InformacionPokemon(viewModel: ViewModelPokemon =viewModel(),
                                     .padding(8.dp)
                             )
 
-                            Spacer(modifier = Modifier.height(4.dp))
+                            Spacer(modifier = Modifier.height(3.dp))
 
                             Text(
                                 text = pokemon.name,
